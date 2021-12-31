@@ -61,8 +61,7 @@ namespace _31122021FormApp2
         {
             secilenid = (int)dataGridView1.CurrentRow.Cells[0].Value;
             secileno = olist.Find(x => secilenid == x.ogrenciId);
-            secilenSehirId = (int)dataGridView1.CurrentRow.Cells[3].Value;
-            secilensehir = slist.Find(x => secilenSehirId == x.sehirID);
+             secilensehir = slist.Find(x => secileno.ogrenciSehirId == x.sehirID);
             txtOgrenciId.Text = secileno.ogrenciId.ToString();
             txtOgrenciAd.Text = secileno.ogrenciAd;
             txtOgrenciMaas.Text = secileno.ogrenciMaas.ToString();
